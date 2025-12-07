@@ -1,0 +1,19 @@
+.storybook-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+.storybook-btn.primary {
+  background-color: #2563eb;
+  color: white;
+}
+.storybook-btn.secondary {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+.storybook-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
