@@ -8,17 +8,30 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "useDefineForClassFields": true,
     "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
+
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": false,
     "isolatedModules": true,
-    "strict": true,
     "jsx": "react-jsx",
-    "noEmit": true
+    "noEmit": true,
+
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "types": ["vite/client"]
   },
-  "include": ["src"]
+  
+  "include": ["src"],
+  
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    "src/stories"  
+  ]
 }
